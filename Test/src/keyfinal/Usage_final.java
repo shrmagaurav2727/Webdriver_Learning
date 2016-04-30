@@ -15,7 +15,7 @@ public class Usage_final {
 
      public  static int m1(){
     	 
-    	 x=14;
+    	 int x=14;
     	 return m1();
     	 
      }

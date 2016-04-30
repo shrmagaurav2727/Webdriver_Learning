@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="751" started-at="2016-04-25T12:53:53Z" finished-at="2016-04-25T12:53:54Z">
+  <suite name="Default suite" duration-ms="2978" started-at="2016-04-30T11:30:14Z" finished-at="2016-04-30T11:30:17Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="751" started-at="2016-04-25T12:53:53Z" finished-at="2016-04-25T12:53:54Z">
-      <class name="updaterecord.UpdateRecordInDB">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:updaterecord.UpdateRecordInDB@b97c004]" name="setUp" is-config="true" duration-ms="17" started-at="2016-04-25T18:23:53Z" finished-at="2016-04-25T18:23:53Z">
+    <test name="Default test" duration-ms="2978" started-at="2016-04-30T11:30:14Z" finished-at="2016-04-30T11:30:17Z">
+      <class name="MySqlReadData">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:MySqlReadData@7946e1f4]" name="setUp" is-config="true" duration-ms="219" started-at="2016-04-30T17:00:14Z" finished-at="2016-04-30T17:00:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="printTableData()[pri:0, instance:updaterecord.UpdateRecordInDB@b97c004]" name="printTableData" duration-ms="713" started-at="2016-04-25T18:23:53Z" finished-at="2016-04-25T18:23:54Z">
+        <test-method status="PASS" signature="printTableData()[pri:0, instance:MySqlReadData@7946e1f4]" name="printTableData" duration-ms="2531" started-at="2016-04-30T17:00:15Z" finished-at="2016-04-30T17:00:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- printTableData -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:updaterecord.UpdateRecordInDB@b97c004]" name="tearDown" is-config="true" duration-ms="0" started-at="2016-04-25T18:23:54Z" finished-at="2016-04-25T18:23:54Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:MySqlReadData@7946e1f4]" name="tearDown" is-config="true" duration-ms="0" started-at="2016-04-30T17:00:17Z" finished-at="2016-04-30T17:00:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- updaterecord.UpdateRecordInDB -->
+      </class> <!-- MySqlReadData -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
