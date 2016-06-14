@@ -27,11 +27,16 @@ public class InternetExplore_handle {
 		
 		IEDriver.findElement(By.tagName("html")).sendKeys(Keys.chord(Keys.CONTROL, "0")); 
 		
-		IEDriver.get("https://www.accuweather.com");
+		IEDriver.get("http://www.accuweather.com");
 		
-		IEDriver.navigate().to("javascript:document.getElementById('overridelink').click()");
+		//IEDriver.navigate().to("javascript:document.getElementById('overridelink').click()");
 		
 		IEDriver.getTitle();
+		
+		
+		
+		
+		
 		
 		
 		
