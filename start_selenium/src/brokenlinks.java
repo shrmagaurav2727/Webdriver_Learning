@@ -1,6 +1,9 @@
 import java.awt.List;
 import java.util.concurrent.TimeUnit;
 import org.apache.http.client.*;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.xerces.util.SynchronizedSymbolTable;
 import org.apache.http.HttpResponse;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -40,20 +43,114 @@ public class brokenlinks {
 	    	 
 	    	 isValid = getResponseCode(url); 
 	    	 
-	  	 
 	    	 
-	     }
+	    	 if (isValid) {
+           	  
+	               System.out.println("VALID LINK "+ url);	            	  
+		            	  
+		            	 System.out.println("XXXXXXXXX-------------XXXXXXXXXXXX--------------XXXXXXXXX-------------XXXXXXXXXX"); 
+	               
+		            	 System.out.println();
+	    	 } else {
+	    		 
+	    		 System.out.println("Broken link is "+ url);
+		            	 
+		            	 System.out.println("YYYYYYYY---------YYYYYYYYYYYY-------------YYYYYYYYYYYYYYY_---------------YYYYYYYYYYYYY");
+		            	  
+		            	 System.out.println();
+		            	  continue;
+		              }
+		
+	    	 
+	    	 
+	  	}
+	     
+	              Fdriver.close();
 	     
 	     
-	     
-	     
-	     
-	         
-	     //Closing Firefox driver
-                Fdriver.close();	
+	
 	
 	
 	
 	}
+	     
+	     
+	     
+          	
+	
+	
+	
+	
+
+	
+
+
+
+
+
+
+
+
+
+	
+public static boolean getResponseCode(String chkurl){	
+
+boolean validResponse = false;
+
+try
+{
+	
+HttpResponse urlrsp = new DefaultHttpClient().execute(new HttpGet(chkurl));
+
+int respCode = urlrsp.getStatusLine().getStatusCode();
+
+System.out.println("Response Code is "+ respCode);
+
+
+if((respCode==404) || (respCode == 505))
+{
+	
+   validResponse = false;
+		   
+}
+else 
+{
+	
+	validResponse = true ;
+
+}}
+
+catch(Exception e){
+
 
 }
+
+return validResponse;
+
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
