@@ -15,7 +15,7 @@ public class Junittest_1 {
 	
 	@Test
 	public void test() throws InterruptedException {
-		fail("Not yet implemented");
+		//fail("Not yet implemented");
 
 		fd.manage().window().maximize();
 	

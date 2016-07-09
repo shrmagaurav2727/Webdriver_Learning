@@ -2,6 +2,7 @@ package junitpack;
 
 import static org.junit.Assert.*;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -25,18 +26,43 @@ public class junitPack_2 {
 	
 	
 	
+	@After 	
 	
+	public void aftertest() {
+		
+		foxd.close();
+	}
 	
 	
 	@Test
 	public void test() throws InterruptedException {
-		fail("Not yet implemented");
+		//fail("Not yet implemented");
 		WebElement Cookie = foxd.findElement(By.xpath(".//*[@id='lnk-eu-cookie-learn']"));
         Cookie.click();
         
+
         System.out.println("The current page URL is ==="+ foxd.getCurrentUrl());
 	
-	
+	}
+        
+        
+        
+        
+        
+        
+      @Test
+      public void test1() throws InterruptedException {
+    	  
+    	  WebElement Location =foxd.findElement(By.xpath("//input[@id='s']"));
+    	   Location.click();
+    	  Location.sendKeys("Noida");
+    	  
+    	  
+      }
+        
+      
+      
+      
 	}
 
 
@@ -68,10 +94,3 @@ public class junitPack_2 {
 
 
 
-
-
-
-
-
-
-}
