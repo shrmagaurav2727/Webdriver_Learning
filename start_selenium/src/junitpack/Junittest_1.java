@@ -13,21 +13,20 @@ public class Junittest_1 {
 
 	WebDriver fd = new FirefoxDriver();
 	
-	@Test
-	public void test() throws InterruptedException {
+	
+	public void test_J1() throws InterruptedException {
 		//fail("Not yet implemented");
 
 		fd.manage().window().maximize();
 	
-        fd.get("http://www.accuwether.com");	
+        fd.get("https://www.wunderground.com/");	
 	
-       WebElement Cookie = fd.findElement(By.xpath(".//*[@id='lnk-eu-cookie-learn']"));
-         Cookie.click();
+       WebElement Login = fd.findElement(By.xpath("//a[@id='wuAccount']/i"));
+         Login.click();
          
          System.out.println("The current page URL is ==="+ fd.getCurrentUrl());
        
-	fd.close();
-	
+	//fd.close();
 	
 	
 	
@@ -35,4 +34,22 @@ public class Junittest_1 {
 	
 	}
 
+	public void closeB() throws InterruptedException{
+		
+		
+		fd.close();
+		
+	}
+	
+	
+
+	public void registeremail() {
+		// TODO Auto-generated method stub
+		WebElement email = fd.findElement(By.xpath("//input[@id='register-email']"));
+        email.click();
+        email.sendKeys("mobileqenoida@gmail.com");
+
+        System.out.println("The current page URL is ==="+ fd.getCurrentUrl());
+	}
+	
 }
